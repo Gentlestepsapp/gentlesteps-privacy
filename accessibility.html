@@ -1,0 +1,192 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Gentle Steps — Accessibility Statement</title>
+<style>
+  :root { color-scheme: light; }
+  body {
+    max-width: 42rem; margin: 0 auto; padding: 2rem 1.25rem 5rem;
+    background: #F7F5F0; color: #2A2822;
+    font: 16px/1.6 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  }
+  h1 { font-size: 1.6rem; margin-bottom: 0.25rem; }
+  h2 { font-size: 1.15rem; margin-top: 2.25rem; }
+  .updated { color: #716F67; font-size: 0.9rem; margin-top: 0; }
+  table { border-collapse: collapse; width: 100%; margin: 1rem 0; }
+  th, td { text-align: left; padding: 0.5rem 0.6rem; border-bottom: 1px solid #E4E0D4; vertical-align: top; }
+  th { font-size: 0.85rem; text-transform: uppercase; letter-spacing: 0.04em; color: #716F67; }
+  code { background: #EFEDE6; padding: 0.1rem 0.3rem; border-radius: 4px; font-size: 0.9em; }
+  .callout { background: #EFEDE6; border-radius: 10px; padding: 1rem 1.1rem; margin: 1.5rem 0; }
+  a { color: #1F6B54; }
+  hr { border: 0; border-top: 1px solid #E4E0D4; margin: 3rem 0 1.25rem; }
+  .pagelinks { font-size: 0.9rem; color: #716F67; }
+</style>
+</head>
+<body>
+
+<h1>Gentle Steps — Accessibility Statement</h1>
+<p class="updated">Last updated: 22 September 2026</p>
+
+<p>
+  Gentle Steps is built for people with ADHD, autism and dyslexia, so
+  accessibility is the point of the app rather than a compliance exercise. This
+  page says what has actually been done, what has not, and how it was checked —
+  including where the answer is "not yet".
+</p>
+
+<div class="callout">
+  <strong>Status: partially conformant, self-assessed.</strong> Colour contrast
+  is verified automatically against WCAG 2.2 AA on every change. The rest has
+  been built carefully but has not been independently audited, and has not been
+  tested by screen reader users. Anything below that says "verified" was
+  measured; anything that says "not tested" means exactly that.
+</div>
+
+<h2>What has been verified</h2>
+
+<p>
+  <strong>Colour contrast.</strong> Every foreground and background pair, in all
+  three background themes, is checked against WCAG 2.2 AA — 4.5:1 for body text,
+  3:1 for large text and interface elements. The check runs as
+  <code>npm run check:contrast</code> and exits with an error if any pair falls
+  below, so a failing palette cannot be released. Eight pairs inherited from an
+  earlier design were below the line and were corrected. The brand green was
+  darkened from <code>#2F8F72</code> to <code>#2A8469</code> because white
+  button text on the original measured 3.97:1.
+</p>
+
+<p>
+  <strong>Every interactive control has an accessibility role.</strong> Verified
+  by an automated pass over the source on 22 September 2026. Before that date
+  eleven controls did not, including the sign-in button.
+</p>
+
+<p>
+  <strong>Text follows the system font size.</strong> The app does not override
+  the operating system's text scaling, so enlarging text in Android's settings
+  enlarges it here.
+</p>
+
+<h2>Reading options</h2>
+
+<p>Three typefaces, three backgrounds, changeable at any time and free forever:</p>
+
+<table>
+  <tr><th>Option</th><th>What the evidence actually says</th></tr>
+  <tr>
+    <td>Inter (default)</td>
+    <td>A plain, highly legible face.</td>
+  </tr>
+  <tr>
+    <td>Atkinson Hyperlegible</td>
+    <td>Drawn to separate letters that get confused — b, d, p, q. The best-founded of the three.</td>
+  </tr>
+  <tr>
+    <td>OpenDyslexic</td>
+    <td>Widely liked and widely requested. <strong>Careful studies have not found that it improves reading</strong>, and some find a small cost. It is offered because people find it comfortable, not because it works.</td>
+  </tr>
+  <tr>
+    <td>Cream / blue / night backgrounds</td>
+    <td>The blue tint has <strong>little good independent evidence</strong> behind it. Offered for comfort, on the same honest footing.</td>
+  </tr>
+</table>
+
+<p>
+  Those caveats are stated inside the app as well. Relabelling a comfort option
+  as a proven accessibility intervention is the claim this app deliberately does
+  not make.
+</p>
+
+<h2>Design decisions made for this audience</h2>
+
+<ul>
+  <li><strong>No streaks, scores or completion percentages.</strong> For people
+    whose difficulty is starting, a streak counter punishes precisely the
+    failure the app exists to soften.</li>
+  <li><strong>No time limits</strong> on any interaction.</li>
+  <li><strong>No flashing, and no animation that could provoke a seizure or
+    discomfort.</strong></li>
+  <li><strong>Works without a signal.</strong> Tasks are cached and completions
+    are queued, so losing connection does not lose your day.</li>
+  <li><strong>A goal produces at most three steps</strong>, and a one-action
+    goal produces one. Padding a simple task into six ceremonial steps is its
+    own accessibility problem.</li>
+</ul>
+
+<h2>Known limitations — what has not been done</h2>
+
+<ul>
+  <li><strong>No independent audit.</strong> Everything here is self-assessed.
+    There is no VPAT or third-party conformance report.</li>
+  <li><strong>Not tested with TalkBack by a screen reader user.</strong> Roles
+    are present and labels are on the controls that need them, but that is not
+    the same as somebody who relies on it having used the app.</li>
+  <li><strong>Not tested with switch access or voice control.</strong></li>
+  <li><strong>No in-app text size control.</strong> The app follows the system
+    setting, which covers most needs but is not the same thing.</li>
+  <li><strong>Android only.</strong> There is no iOS version.</li>
+  <li><strong>The interactive buttons on reminders</strong> — "Started it" and
+    "In 20 minutes" — need a full install from Google Play. They do not appear
+    when the app is run through Expo Go.</li>
+</ul>
+
+<h2>How this was assessed</h2>
+
+<p>
+  Contrast by an automated check against the WCAG 2.2 AA thresholds, run on
+  every change to the palette. Roles by an automated pass over the source.
+  Everything else by the developer, against the WCAG 2.2 AA criteria, without
+  assistive-technology testing.
+</p>
+
+<p>
+  <strong>That is a weaker basis than a formal audit and is presented as such.</strong>
+  If you are assessing this app for an institution and need conformance evidence
+  beyond a self-assessment, say so — it is better to arrange a proper audit than
+  to have you take this page on trust.
+</p>
+
+<h2>Telling us something is wrong</h2>
+
+<p>
+  If any part of Gentle Steps is unusable for you, email
+  <a href="mailto:gentlestepsapp@gmail.com">gentlestepsapp@gmail.com</a>.
+  Describe what you were trying to do and what happened — you do not need to
+  know the technical term for it.
+</p>
+
+<p>
+  Accessibility faults are treated as ordinary bugs and go to the front of the
+  queue, because an app nobody can use is worse than a missing feature.
+</p>
+
+<h2>For institutions</h2>
+
+<p>
+  If you are a university disability service, college or employer considering
+  Gentle Steps for a group, email the address above. Data is stored in the EU
+  (Ireland), the app collects deliberately little, and the
+  <a href="index.html">privacy policy</a> lists every item. Licensing for
+  groups, a data processing agreement, and a fuller accessibility assessment can
+  all be arranged — none of them exists as a standard document yet, and it is
+  better to say so than to send you something dressed up as one.
+</p>
+
+<h2>Contact</h2>
+
+<p>
+  <a href="mailto:gentlestepsapp@gmail.com">gentlestepsapp@gmail.com</a>
+</p>
+
+<hr>
+
+<p class="pagelinks">
+  <a href="index.html">Privacy policy</a> &middot;
+  <a href="terms.html">Terms</a> &middot;
+  <a href="delete-account.html">Delete your account</a>
+</p>
+
+</body>
+</html>
