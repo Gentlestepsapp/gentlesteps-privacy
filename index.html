@@ -27,7 +27,7 @@
 <body>
 
 <h1>Gentle Steps — Privacy Policy</h1>
-<p class="updated">Last updated: 2 October 2026</p>
+<p class="updated">Last updated: 15 October 2026</p>
 
 <p>
   Gentle Steps helps you turn a goal into small steps with reminders. This page
@@ -54,7 +54,9 @@
   <tr><td>Your tasks — title, date, time, whether it repeats</td><td>To show your list and schedule reminders.</td></tr>
   <tr><td>Which tasks you ticked off, and on which day</td><td>So a daily task can be done today and open again tomorrow.</td></tr>
   <tr><td>How many breakdowns you have used this month</td><td>To apply the monthly allowance.</td></tr>
-  <tr><td>Whether you have a paid subscription, and when it runs out</td><td>To take the ads away and raise your monthly allowance. Stored as a plan name and a date, nothing more.</td></tr>
+  <tr><td>Whether you have a paid subscription, and when it runs out</td><td>To take the ads away and apply the right allowance. Stored as a plan name and a date, nothing more.</td></tr>
+  <tr><td>Whether an advert played before each breakdown, and Google's confirmation code for it</td><td>To check that the advert paying for a free breakdown really played.</td></tr>
+  <tr><td>Your sign-in sessions — the IP address and type of device each one was started from</td><td>Kept by our sign-in provider to keep your account secure. Removed when you sign out of that device or delete your account.</td></tr>
 </table>
 
 <p>
@@ -84,10 +86,12 @@
 
 <p><strong>Anthropic</strong> — when you ask for a goal to be broken into steps,
 the text you typed is sent to Anthropic's API, which returns the ordered steps.
-This means the goal you write leaves this app. Please bear that in mind if you
+With Plus, the tools that plan a week, rework a day or help with a stuck step
+also send the titles and times of the tasks involved. This means what you write
+leaves this app. Please bear that in mind if you
 would write something you would not want processed by a third party. Anthropic
 does not use API data to train their models. Your email address and account are
-not sent — only the goal text and the current time.</p>
+not sent — only that text and the current time.</p>
 
 <p>Anthropic is based in the United States, so your goal may be processed
 outside the UK. That transfer is covered by
@@ -121,17 +125,19 @@ it mentions precise geolocation. This app blocks location permission entirely:
 neither the app nor Google's advertising code inside it can read where you are,
 beyond the rough region any internet connection reveals.</p>
 
-<p><strong>RevenueCat</strong> — if you buy Gentle Steps Plus, RevenueCat is
-what checks with Google that the purchase is real and tells this app when your
-subscription starts, renews or ends. It receives your account's identifier and
-the purchase details Google gives it — which product, when it renews, whether
-it was refunded.</p>
+<p><strong>RevenueCat</strong> — checks with Google that a purchase of Gentle
+Steps Plus is real, and tells this app which plan you are on and when a
+subscription starts, renews or ends. When you sign in, the app gives RevenueCat
+your account's identifier — a random code, not your email — so it can answer
+that question; this happens whether or not you ever buy anything. If you buy,
+it also receives the purchase details Google gives it — which product, when it
+renews, whether it was refunded.</p>
 
 <p>It does not receive your goals, your tasks or your email address, and it
 never sees your card. The setting that would let it collect your advertising ID
 and device identifiers is deliberately switched off, because this app has no
-use for it. If you never buy anything, RevenueCat is told nothing about you at
-all.</p>
+use for it. If you never buy anything, RevenueCat holds that identifier and
+nothing else about you.</p>
 
 <p>RevenueCat is based in the United States and processes this there. That
 transfer is covered by
@@ -141,6 +147,10 @@ UK Addendum to the EU Standard Contractual Clauses.</p>
 
 <p><strong>Supabase</strong> — hosts the database and handles sign-in. Your data
 is stored in their EU (Ireland) region.</p>
+
+<p><strong>Gmail</strong> — the emails that confirm your sign-up or reset your
+password are sent through Google's Gmail from gentlestepsapp@gmail.com, so
+Google handles your email address to deliver them.</p>
 
 <p><strong>Google Play</strong> — handles distribution, and takes the payment if
 you subscribe. Your card details go to Google and never reach this app or
@@ -178,9 +188,11 @@ the advertising ID and technical request details described above.</p>
 
 <p>
   To delete your whole account and everything attached to it, email the address
-  below from the address you signed up with, and it will be erased within 30
-  days. Deletion removes your tasks, goals, completions and account record — it
-  cannot be undone.
+  below from the address you signed up with (<em>Settings → Delete your
+  account</em> in the app shows how), and it will be erased within 30 days. Deletion
+  removes your tasks, goals, completions, sign-in sessions and account record,
+  and the customer record RevenueCat holds for your account — it cannot be
+  undone.
 </p>
 
 <h2>Your rights</h2>
@@ -189,15 +201,23 @@ the advertising ID and technical request details described above.</p>
   Under UK and EU data protection law you can ask for a copy of your data, ask
   for it to be corrected, ask for it to be deleted, or object to how it is
   handled. Use the contact address below and you will get a reply within 30
-  days. If you are not satisfied, you can complain to the
-  <a href="https://ico.org.uk/make-a-complaint/">Information Commissioner's Office</a>.
+  days.
+</p>
+
+<p>
+  If you are unhappy with how your data has been handled, tell me first at the
+  same address: I will acknowledge it within 30 days, look into it, and tell
+  you what I have done. If you are still not satisfied, you can complain to the
+  <a href="https://ico.org.uk/make-a-complaint/">Information Commission</a>, the
+  UK regulator (until 30 September 2026 called the Information Commissioner's
+  Office).
 </p>
 
 <h2>Children</h2>
 
 <p>
-  Gentle Steps is not designed for or aimed at children under 13, and accounts
-  should not be created for them.
+  Gentle Steps is for adults: you must be 18 or over to use it, and accounts
+  should not be created for anyone younger.
 </p>
 
 <h2>Changes</h2>
@@ -221,6 +241,7 @@ the advertising ID and technical request details described above.</p>
 <p class="pagelinks">
   <a href="terms.html">Terms</a> &middot;
   <a href="accessibility.html">Accessibility statement</a> &middot;
+  <a href="evidence.html">Evidence behind the Learn tab</a> &middot;
   <a href="delete-account.html">Delete your account</a>
 </p>
 
